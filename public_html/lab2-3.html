@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Панаев С.И.</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".left").click(function() {
+                $("#img").animate({left: "-=100px"}, 200);
+            });
+            $(".right").click(function() {
+                $("#img").animate({left: "+=100px"}, 200);
+            });
+            $(".up").click(function() {
+                $("#img").animate({top: "-=100px"}, 200);
+            });
+            $(".down").click(function() {
+                $("#img").animate({top: "+=100px"}, 200);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <img id="img" style="position:absolute;" src="https://picsum.photos/300/300"></div>
+    </div>
+    <div class="control" style="text-align:center;padding-top:95%">
+        <button class="up">Вверх</button>
+        <button class="down">Вниз</button>
+        <button class="left">Влево</button>
+        <button class="right">Вправо</button>
+    </div>
+</body>
+</html>

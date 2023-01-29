@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>  
+    <meta charset="utf-8">
+    <title>Панаев С.И. ПИ-423</title>
+    <script language="JavaScript" type="text/JavaScript">
+    function les(){ 
+lesson=new Array("обществознание" , "литература" , "история" , "экономика",
+
+"математика","физика","программирование","биология");
+
+gum=new Array();
+
+gum=lesson.slice(0,4);
+
+tech=new Array();
+
+tech=lesson.slice(5,8);
+
+document.write("Гуманитарные дисциплины: " +gum+"."+"<br>");
+
+document.write("Технические дисциплины: "+tech+"."+"<br>");
+
+}
+
+</script>
+     </head>
+<body>
+    <script language="JavaScript" type="text/JavaScript">
+year=new Array("декабрь","январь","февраль","март","апрель","май",
+
+"июнь","июль","август","сентябрь","октябрь","ноябрь");
+
+summer=new Array(); //летние месяцы
+
+summer=year.slice(5,9);
+
+document.write(summer+"<br>");
+les();
+</script>
+<br><input type="button" onclick="history.back(-2); return false;" value="Назад"/>
+</body>
+</html>

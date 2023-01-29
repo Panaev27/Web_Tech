@@ -1,0 +1,80 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Панаев С.И.</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".submit").click(function() {
+                if($("#name").val().length <= 0) {
+                    document.getElementById("name").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("name").style.border = "";
+                }
+
+                if($("#passwd").val().length <= 4) {
+                    document.getElementById("passwd").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("passwd").style.border = "";
+                }
+
+                if($("#passwd_confirm").val().length <= 4) {
+                    document.getElementById("passwd_confirm").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("passwd_confirm").style.border = "";
+                }
+
+                if($("#passwd").val() != $("#passwd_confirm").val() || $("#passwd").val() <= 0 || $("#passwd_confirm").val() <= 0) {
+                    document.getElementById("passwd").style.border = "2px solid red";
+                    document.getElementById("passwd_confirm").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("passwd").style.border = "";
+                    document.getElementById("passwd_confirm").style.border = "";
+                }
+
+                if($("#email").val().length <= 0 || $("#email").val().indexOf("@") < 0) {
+                    document.getElementById("email").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("email").style.border = "";
+                }
+
+                if($("#message").val().length <= 10) {
+                    document.getElementById("message").style.border = "2px solid red";
+                }
+                else {
+                    document.getElementById("message").style.border = "";
+                }
+            });
+
+            $(".reset").click(function() {
+                document.getElementById("name").style.border = "";
+                document.getElementById("passwd").style.border = "";
+                document.getElementById("passwd_confirm").style.border = "";
+                document.getElementById("email").style.border = "";
+                document.getElementById("message").style.border = "";
+
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <form class="auth">
+            <p><span style="color:red">*</span> Ваше имя: <input id="name" type="text" size="10"></p>
+            <p><span style="color:red">*</span> Пароль: <input id="passwd" type="password" size="10"></p>
+            <p><span style="color:red">*</span> Подтверждение пароля: <input id="passwd_confirm" type="password" size="10"></p>
+            <p><span style="color:red">*</span> Email: <input id="email" type="email" size="10"></p>
+            <p>Тема сообщения: <input id="header" type="text" size="20"></p>
+            <p>Сообщение: <textarea id="message" rows="5" cols="20"></textarea></p>
+            <button class="submit" type="button">Отправить</button>
+            <button class="reset" type="reset">Очистить</button>
+        </form>
+    </div>
+</body>
+</html>

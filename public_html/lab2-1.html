@@ -1,0 +1,26 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Панаев С.И.</title>
+    <script type="text/javascript" src="jquery.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $(".btn-color").click(function() {
+                var c1=Math.floor(Math.random()*256);
+                var c2=Math.floor(Math.random()*256);
+                var c3=Math.floor(Math.random()*256);
+
+                document.body.style.backgroundColor = "rgb(" + c1 + "," + c2 +"," + c3 +")";
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="wrapper">
+        <div style="text-align:center"><button class="btn-color">
+            Сменить цвет!
+        </button></div>
+    </div>
+</body>
+</html>
